@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* primaire */
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* neutre */
+  --transparent: hsla(0, 0%, 100%, 0.75);
+  --light-grey: hsl(0, 0%, 95%);
+
+  /* font */
+  --titre: "Big Shoulder Display", sans-serif;
+  --text: "Lexend Deca", sans-serif;
+}
+
+/* général */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  background-color: var(--light-grey);
+}
+
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  padding: 50px;
+}
+
+.box h2 {
+  margin: 30px 0;
+  text-transform: uppercase;
+  font-family: var(--titre);
+  color: white;
+  font-size: 30px;
+}
+
+.box p {
+  margin-bottom: 70px;
+  font-family: var(--text);
+  color: var(--transparent);
+  line-height: 30px;
+}
+
+.sedans {
+  width: 300px;
+  background-color: var(--orange);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.suvs {
+  width: 300px;
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  width: 300px;
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: var(--text);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btn-sedans {
+  color: var(--orange);
+  transition: 0.2s;
+}
+.btn-sedans:hover {
+  background-color: var(--orange);
+  color: var(--light-grey);
+  transition: 0.2s;
+}
+
+.btn-suvs {
+  color: var(--dark-cyan);
+  transition: 0.2s;
+}
+.btn-suvs:hover {
+  background-color: var(--dark-cyan);
+  color: var(--light-grey);
+  transition: 0.2s;
+}
+
+.btn-luxury {
+  color: var(--very-dark-cyan);
+  transition: 0.2s;
+}
+.btn-luxury:hover {
+  background-color: var(--very-dark-cyan);
+  color: var(--light-grey);
+  transition: 0.2s;
+}
+
+/* téléphone */
+@media only screen and (max-width: 375px) {
+  html,
+  body {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translate(-10%, -20%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sedans {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+
+  .luxury {
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+  }
+
+  .box p {
+    margin-bottom: 50px;
+  }
+}
